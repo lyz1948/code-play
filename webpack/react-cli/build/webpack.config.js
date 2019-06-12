@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, '../template/index.html')
+      template: resolve(__dirname, '../src/template/index.html')
     })
   ],
   resolve: {
