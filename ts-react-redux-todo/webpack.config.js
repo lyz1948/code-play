@@ -26,7 +26,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      '@': r('src/')
+      app: r('src/')
     }
   },
   module: {
