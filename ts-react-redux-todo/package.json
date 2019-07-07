@@ -1,0 +1,51 @@
+{
+  "name": "ts-todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "A frontend boilerplate with React, Redux and Typescript",
+  "keywords": [
+    "react",
+    "redux",
+    "typescript",
+    "boilerplate",
+    "todomvc"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "history": "^4.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "redux-actions": "^2.6.4",
+    "redux": "^4.0.1",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.2",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@types/classnames": "^2.2.7",
+    "@types/history": "^4.7.2",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "@types/react-redux": "^7.0.0",
+    "@types/react-router": "^4.4.3",
+    "@types/redux-actions": "2.3.1",
+    "@types/webpack": "^4.4.23",
+    "@types/webpack-env": "1.13.6",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "postcss-loader": "^3.0.0",
+    "react-hot-loader": "^4.12.3",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0"
+  }
+}
