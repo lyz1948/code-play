@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Route, Switch } from 'react-router'
-import { App as TodoApp } from '@/containers/App'
+import { App as TodoApp } from './containers'
 import { hot } from 'react-hot-loader'
 
 export const App = hot(module)(() => (

@@ -19,7 +19,7 @@
       }
     ],
     "trailing-comma": [
-      true,
+      false,
       {
         "multiline": "always",
         "singleline": "never"
@@ -33,7 +33,7 @@
     "no-trailing-whitespace": true,
     "no-unsafe-finally": true,
     "one-line": [true, "check-open-brace", "check-whitespace"],
-    "quotemark": [true, "double"],
+    "quotemark": [true, "single"],
     "semicolon": [false, "always"],
     "triple-equals": [true, "allow-null-check"],
     "typedef-whitespace": [

@@ -5,6 +5,7 @@
     "jsx": "react",
     "module": "es6",
     "moduleResolution": "node",
+    "types" : ["node"],
     "experimentalDecorators": true,
     "declaration": false,
     "removeComments": true,
@@ -13,10 +14,14 @@
     "strict": true,
     "outDir": "build",
     "lib": ["es6", "es7", "dom"],
-    "baseUrl": "src",
+    "typeRoots" : ["./types"],
+    "baseUrl": ".",
     "paths": {
-      "app/*": ["./src/*"]
-    }
+      "@app/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@store/*": ["./src/store/*"]
+    },
   },
   "exclude": ["build", "node_modules"]
 }

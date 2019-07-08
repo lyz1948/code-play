@@ -1,4 +1,4 @@
-import { createAction } from 'react-redux'
+import { createAction } from 'redux-actions'
 import { TodoModel } from '../models'
 
 export namespace TodoActions {
@@ -19,4 +19,4 @@ export namespace TodoActions {
   export const clearCompleted = createAction(Type.CLEAR_COMPLETED)
 }
 
-export type TodoActions = Omit<typeof TodoActions, 'Type'>
+export type TodoActions = omit<typeof TodoActions, 'Type'>

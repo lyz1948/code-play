@@ -24,7 +24,11 @@ export class Header extends React.Component<Header.IProps> {
     return (
       <header>
         <h1>Todos</h1>
-        <TodoTextInput newTodo onSave={this.handleSave} placeholder='enter new todo'></TodoTextInput>
+        <TodoTextInput
+          newTodo
+          onSave={this.handleSave}
+          placeholder='enter new todo!!'
+        />
       </header>
     )
   }

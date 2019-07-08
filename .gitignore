@@ -2,7 +2,9 @@
 /node_modules/*
 */node_modules/*
 */*/node_modules/*
-*/*/yarn.lock
+*/yarn.lock
+*/**/yarn.lock
+*/*/yarn-error.log
 /dist/*
 */dist/
 */package-lock.json
