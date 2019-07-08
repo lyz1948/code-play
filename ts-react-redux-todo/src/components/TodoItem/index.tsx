@@ -55,6 +55,7 @@ export class TodoItem extends React.Component<
       element = (
         <div>
           <input
+            className={styles.toggle}
             type='checkbox'
             checked={todo.completed}
             onChange={() => todo.id && completeTodo(todo.id)}

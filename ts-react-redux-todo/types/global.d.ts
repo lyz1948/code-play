@@ -3,8 +3,8 @@ declare module '*.css' {
   export = styles
 }
 
-declare const module: any
-declare const require: any
+declare var module: any
+declare var require: any
 
 declare interface NodeModule {
   hot: {

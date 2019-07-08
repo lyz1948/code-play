@@ -1,9 +1,9 @@
 import * as React from 'react'
+import * as styles from './style.css'
 import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
 import { RouteComponentProps } from 'react-router'
 import { omit } from '../utils'
-import * as styles from './style.css'
 import { Header, Footer } from '../components'
 import { TodoModel } from '../store/models'
 import { RootState } from '../store/reducers'
@@ -42,6 +42,7 @@ export namespace App {
     actions: bindActionCreators(omit(TodoActions, 'Type'), dispatch),
   }),
 )
+
 export class App extends React.Component<App.IProps> {
   static defaultProps: Partial<App.IProps> = {
     filter: TodoModel.Filter.SHOW_ALL,
@@ -80,7 +81,7 @@ export class App extends React.Component<App.IProps> {
 
     return (
       <div className={styles.normal}>
-        <Header addTodo={TodoActions.addTodo} />
+        <Header addTodo={actions.addTodo} />
         <TodoList todos={filteredTodos} actions={actions} />
         <Footer
           filter={filter}

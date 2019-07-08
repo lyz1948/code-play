@@ -1,8 +1,8 @@
 import * as React from 'react'
 import * as styles from './style.css'
-import { TodoActions } from '@store/actions/todos'
+import { TodoActions } from '../../store/actions/todos'
 import { TodoItem } from '../TodoItem'
-import { TodoModel } from '@store/models'
+import { TodoModel } from '../../store/models'
 
 export namespace TodoList {
   export interface IProps {
@@ -32,18 +32,19 @@ export class TodoList extends React.Component<TodoList.IProps> {
   render() {
     const { todos, actions } = this.props
 
-    return (<section className={styles.main}>{this.renderToggeAll()}
-    <ul className={styles.normal}>
-      {todos.map((todo) => (
-        <TodoItem
-          key={todo.id}
-          todo={todo}
-          completeTodo={actions.completeTodo}
-          deleteTodo={actions.deleteTodo}
-          editTodo={actions.editTodo}
-        />
-      ))}
-    </ul>
+    return (
+    <section className={styles.main}>{this.renderToggeAll()}
+      <ul className={styles.normal}>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            completeTodo={actions.completeTodo}
+            deleteTodo={actions.deleteTodo}
+            editTodo={actions.editTodo}
+          />
+        ))}
+      </ul>
     </section>)
   }
 }
