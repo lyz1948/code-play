@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Socket.io Example</title>
+	<style>
+		.container {position: relative; width: 800px; height: 500px; margin: 20px auto; border: 1px solid #eee; background: #e8f9de; overflow-y: auto;}
+		.msg-list {padding: 20px; list-style: none; overflow: hidden;}
+		.msg-list li {clear: both; width: 100%; font-size: 14px; color: #666; line-height: 30px; color: #fff;}
+		.msg-list li span {border-radius: 4px; padding: 0 10px; }
+		.msg-l > span{float: left; background: #cddc39;}
+		.msg-r > span{float: right; background: #8bc34a;}
+		form {display: flex; position: absolute; left: 0; bottom: 0; width: 100%;}
+		form input {flex: 1; padding-left: 10px; border: 1px solid #ccc; font-size: 16px;color: #333; outline: none;}
+		form button {display: block; flex: 0 0 80px; width: 80px; line-height: 40px; background: #8bc34a; color: #fff; font-size: 14px; text-align: center; border: 0; outline: none; cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="msg-list"></ul>
+		<form action="">
+			<input type="text" id="textInput" placeholder="write message here" autocomplete="off">
+			<button>发送</button>
+		</form>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+	$(function () {
+		var count = 0
+    var socket = io();
+
+    $('form').submit(function(){
+    	var msg = $('#textInput').val()
+      socket.emit('message', msg);
+      $('#textInput').val('');
+      return false;
+    });
+    socket.on('message', function(msg){
+    	if(msg) {
+	    	var con = $('<li>')
+	    	var span = $('<span>').html(msg)
+	    	
+	    	con.append(span)
+	    	count++
+	    	count % 2 ? con.addClass('msg-l') : con.addClass('msg-r')
+	      $('.msg-list').append(con);
+    	}
+    });
+  });
+	</script>
+</body>
+</html>

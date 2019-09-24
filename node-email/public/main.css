@@ -1,0 +1,40 @@
+html, body {margin: 0; padding: 0; font-size: 16px;color: #333;}
+a {text-decoration: none; }
+input {
+	padding: 6px;
+	outline: none;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+textarea {
+	border: 1px solid #ddd;
+	padding: 6px;
+	resize: none;
+}
+.container{
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+.row label{
+	display: block;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+.mail-title input {
+	width: 300px;
+}
+.mail-content textarea {
+	width: 300px;
+	height: 200px;
+}
+.send-btn {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	padding: 5px 6px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	color: #333;
+	text-align: center;
+}
