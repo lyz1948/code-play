@@ -64,7 +64,7 @@ export function numToWord(num) {
     (acc, ref) => {
       return ref.num === num ? ref.work : acc
     },
-    ''
+    '',
   )
 }
 
@@ -74,7 +74,7 @@ export function wordToNum(word) {
     (acc, ref) => {
       return ref.word === word && word.toLowerCase() ? ref.num : acc
     },
-    -1
+    -1,
   )
 }
 ```
@@ -85,28 +85,28 @@ export function wordToNum(word) {
 ;[
   {
     num: 1,
-    word: 'One'
+    word: 'One',
   },
   {
     num: 2,
-    word: 'Two'
+    word: 'Two',
   },
   {
     num: 3,
-    word: 'Three'
+    word: 'Three',
   },
   {
     num: 4,
-    word: 'Four'
+    word: 'Four',
   },
   {
     num: 5,
-    word: 'Five'
+    word: 'Five',
   },
   {
     num: 0,
-    word: 'Zero'
-  }
+    word: 'Zero',
+  },
 ]
 ```
 
@@ -120,8 +120,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'webpack-numbers.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    path: path.resolve(__dirname, 'dist'),
+  },
 }
 ```
 
@@ -207,8 +207,8 @@ module.exports = {
     'library/one',
     'library/two',
     // Everything that starts with "library/"
-    /^library\/.+$/
-  ]
+    /^library\/.+$/,
+  ],
 }
 ```
 
@@ -222,16 +222,16 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'webpack-numbers.js',
-    library: 'webpackNumbers'
+    library: 'webpackNumbers',
   },
   externals: {
     lodash: {
       commonjs: 'lodash',
       commonjs2: 'lodash',
       amd: 'lodash',
-      root: '_'
-    }
-  }
+      root: '_',
+    },
+  },
 }
 ```
 
