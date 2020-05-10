@@ -1,4 +1,4 @@
-# code-play 记录成功过程
+# code-play 记录成长过程
 
 ## 仓库分支列表
 [算法](https://github.com/lyz1948/code-play/tree/aligorith)
